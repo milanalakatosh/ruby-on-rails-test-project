@@ -210,3 +210,42 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.1ms | Allocations: 2217)
 
 
+Started GET "/articles/2" for ::1 at 2024-05-07 12:04:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 101.7ms | Allocations: 38074)
+Completed 200 OK in 149ms (Views: 107.2ms | ActiveRecord: 2.6ms | Allocations: 59189)
+
+
+Started DELETE "/articles/2?_method=delete" for ::1 at 2024-05-07 12:04:48 +0300
+Processing by ArticlesController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mArticle Destroy (3.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/
+Completed 303 See Other in 9ms (ActiveRecord: 4.4ms | Allocations: 2336)
+
+
+Started GET "/" for ::1 at 2024-05-07 12:04:48 +0300
+Processing by ArticlesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 738)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2204)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 2577)
+
+
