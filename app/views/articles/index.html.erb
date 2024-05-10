@@ -1,18 +1,17 @@
-<h1>Articles</h1>
+<h1 class='header'>Articles</h1>
 
 Our blog has <%= Article.public_count %> articles and counting!
 
-<ul>
+<ol class='list'>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
       <li>
-        <%= link_to article.title, article %> - 
+        <%= link_to article.title, article, class: 'link' %> by
 
-        <%= link_to article.author.full_name, author_path(article.author.id) %> 
+        <%= link_to article.author.full_name, author_path(article.author.id), class: 'link' %> 
       </li>
     <% end %>
   <% end %>
-</ul>
+</ol>
 
-<p><%= link_to "New Article", new_article_path %></p>
-<p><%= link_to 'All authors', authors_path %></p>
+<%= link_to 'New Article', new_article_path, class: 'button' %>

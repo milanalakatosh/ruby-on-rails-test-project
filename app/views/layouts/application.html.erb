@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RubyOnRailsTestProject</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Your Rails App</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'form', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
 
-  <body>
-    <%= yield %>
-  </body>
+<header>
+  <div class='logo'>
+    <%= link_to root_path do %>
+      <%= image_tag('logo.svg', alt: 'Logo') %>
+    <% end %>
+  </div>
+  <nav>
+    <ul>
+      <li><%= link_to 'Articles', articles_path %></li>
+      <li><%= link_to 'Authors', authors_path %></li>
+    </ul>
+  </nav>
+</header>
+
+<div class='page'>
+  <%= yield %>
+</div>
+
+</body>
 </html>

@@ -1,31 +1,33 @@
-<%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :status %><br>
-    <%= form.select :status, Visible::VALID_STATUSES, selected: article.status || 'public' %>
-  </div>
+<div class='form-container'>
+  <%= form_with model: article do |form| %>
+    <div class='form-field'>
+      <%= form.label :status %><br>
+      <%= form.select :status, Visible::VALID_STATUSES, selected: article.status || 'public' %>
+    </div>
 
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div class='form-field'>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div class='error'><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div class='form-field'>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div class='error'><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.label :author_id, "Author" %>
-    <%= form.collection_select :author_id, Author.all, :id, :full_name, { prompt: "Select Author" } %>
-  </div>
+    <div class='form-field'>
+      <%= form.label :author_id, "Author" %>
+      <%= form.collection_select :author_id, Author.all, :id, :full_name, { prompt: "Select Author" } %>
+    </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div class='form-button'>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

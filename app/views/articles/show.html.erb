@@ -1,22 +1,23 @@
-<h1><%= @article.title %></h1>
+<h1 class='header'><%= @article.title %></h1>
 
 <p><%= @article.body %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @article.author.full_name %> 
+<p class='block-header'>
+  Author:
+  <%= link_to @article.author.full_name, author_path(@article.author.id), class: 'link' %> 
 </p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
+<div className='button-container'>
+  <%= link_to "Edit", edit_article_path(@article), class: 'button'%>
+  <%= link_to "Delete", article_path(@article), class: 'button button_delete', data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+                  } %>
+</div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+<% if @article.comments.any? %>
+  <h2 class='block-header'>Comments:</h2>
+  <%= render @article.comments %>
+<% end %>
 
-<h2>Add a comment:</h2>
 <%= render 'comments/form' %>

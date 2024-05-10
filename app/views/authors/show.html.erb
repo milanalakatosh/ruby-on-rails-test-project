@@ -1,27 +1,35 @@
-<p>
-  <strong>First Name:</strong>
-  <%= @author.first_name %>
-</p>
+<div class='list'>
+  <p>
+    First Name:
+    <%= @author.first_name %>
+  </p>
 
-<p>
-  <strong>Last Name:</strong>
-  <%= @author.last_name %>
-</p>
+  <p>
+    Last Name:
+    <%= @author.last_name %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @author.email %>
-</p>
+  <p>
+    Email:
+    <%= @author.email %>
+  </p>
 
-<h2>Articles</h2>
-<ul>
-  <% @author.articles.each do |article| %>
-    <li><%= link_to article.title, article %></li>
-  <% end %>
-</ul>
+  <% if @author.articles.any? %>
+    <p>Articles:</p>
+    <ul>
+      <% @author.articles.each do |article| %>
+        <li><%= link_to article.title, article, class:'link' %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No articles found.</p>
+<% end %>
+</div>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Delete', author_path(@author), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %>
+<div className='button-container'>
+  <%= link_to 'Edit', edit_author_path(@author), class: 'button' %> 
+  <%= link_to 'Delete', author_path(@author), class: 'button button_delete', data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                    } %>
+</div>

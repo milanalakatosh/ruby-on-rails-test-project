@@ -1,11 +1,11 @@
-<h1>Authors</h1>
+<h1 class='header'>Authors</h1>
 
-<ul>
+<ol class='list'>
   <% @authors.each do |author| %>
     <li>
-      <%= link_to author.full_name, author_path(author.id) %> 
+      <%= link_to author.full_name, author_path(author.id), class:'link' %> 
     </li>
   <% end %>
-</ul>
+</ol>
 
-<%= link_to "New Author", new_author_path %>
+<%= link_to "New Author", new_author_path, class:'button' %>
