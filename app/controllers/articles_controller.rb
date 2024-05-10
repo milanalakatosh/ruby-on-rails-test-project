@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   # User must be authenticated on every action except index and show
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: "test", password: "test", except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -47,6 +47,6 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :body, :status)
+      params.require(:article).permit(:title, :body, :status, :author_id)
     end
 end

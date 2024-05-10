@@ -21,6 +21,11 @@
   </div>
 
   <div>
+    <%= form.label :author_id, "Author" %>
+    <%= form.collection_select :author_id, Author.all, :id, :full_name, { prompt: "Select Author" } %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
