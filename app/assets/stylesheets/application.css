@@ -85,6 +85,10 @@ nav ul li a:hover {
   background-color: red;
 }
 
+.button_delete:hover {
+  background-color: rgb(201, 5, 5);
+}
+
 .list {
   border: 1px solid #ddd;
   border-radius: 8px;

@@ -294,3 +294,699 @@ Processing by ArticlesController#show as TURBO_STREAM
 Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.6ms | Allocations: 6721)
 
 
+Started GET "/authors" for ::1 at 2024-05-10 23:55:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:4
+  Rendered authors/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 10529)
+  Rendered layout layouts/application.html.erb (Duration: 111.5ms | Allocations: 53611)
+Completed 200 OK in 158ms (Views: 113.1ms | ActiveRecord: 3.1ms | Allocations: 64906)
+
+
+Started GET "/authors/new" for ::1 at 2024-05-10 23:56:13 +0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 8.3ms | Allocations: 2404)
+  Rendered authors/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2693)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5742)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6117)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-10 23:56:14 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 60.8ms | Allocations: 13552)
+  Rendered layout layouts/application.html.erb (Duration: 65.1ms | Allocations: 16918)
+Completed 200 OK in 85ms (Views: 64.9ms | ActiveRecord: 1.3ms | Allocations: 19790)
+
+
+Started GET "/authors/3" for ::1 at 2024-05-10 23:56:15 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 3], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 3]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1094)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4417)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 5326)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-10 23:56:16 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4354)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 5260)
+
+
+Started GET "/authors/3" for ::1 at 2024-05-10 23:56:17 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 3], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 3]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1091)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 4439)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 5333)
+
+
+Started DELETE "/authors/3?_method=delete" for ::1 at 2024-05-10 23:56:23 +0300
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mArticle Load (2.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 3]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mComment Destroy (3.8ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mArticle Destroy (0.1ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mAuthor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:42:in `destroy'
+Redirected to http://localhost:3000/authors
+Completed 303 See Other in 52ms (ActiveRecord: 9.4ms | Allocations: 14929)
+
+
+Started GET "/authors" for ::1 at 2024-05-10 23:56:23 +0300
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:4
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 455)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3795)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 4103)
+
+
+Started GET "/articles" for ::1 at 2024-05-10 23:56:25 +0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 2792)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 6145)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.9ms | Allocations: 6676)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-10 23:56:27 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4375)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 5268)
+
+
+Started GET "/articles/1" for ::1 at 2024-05-10 23:56:27 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 17.4ms | Allocations: 2248)
+  Rendered articles/show.html.erb within layouts/application (Duration: 80.2ms | Allocations: 3852)
+  Rendered layout layouts/application.html.erb (Duration: 96.6ms | Allocations: 6891)
+Completed 200 OK in 101ms (Views: 97.1ms | ActiveRecord: 0.4ms | Allocations: 8168)
+
+
+Started GET "/articles/1" for ::1 at 2024-05-10 23:56:28 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 2.1ms | Allocations: 1152)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2310)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5349)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 5955)
+
+
+Started GET "/" for ::1 at 2024-05-13 10:25:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 39.3ms | Allocations: 23284)
+  Rendered layout layouts/application.html.erb (Duration: 190.4ms | Allocations: 66814)
+Completed 200 OK in 250ms (Views: 193.1ms | ActiveRecord: 2.9ms | Allocations: 78797)
+
+
+Started GET "/authors" for ::1 at 2024-05-13 10:25:37 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:4
+  Rendered authors/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 744)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4074)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.1ms | Allocations: 4632)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-13 10:25:39 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3565)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 6907)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 8508)
+
+
+Started GET "/authors/new" for ::1 at 2024-05-13 10:25:40 +0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 7.1ms | Allocations: 2388)
+  Rendered authors/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2673)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5716)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 6085)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-13 10:25:41 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4356)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 5250)
+
+
+Started GET "/authors/1/edit" for ::1 at 2024-05-13 10:25:45 +0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.5ms | Allocations: 1092)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1271)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4309)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 5283)
+
+
+Started PATCH "/authors/1" for ::1 at 2024-05-13 10:25:57 +0300
+Processing by AuthorsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"first_name"=>"Milana", "last_name"=>"Lakatosh", "email"=>"milana@gmail.com"}, "commit"=>"Update Author", "id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:33:in `update'
+  [1m[36mAuthor Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? AND "authors"."id" != ? LIMIT ?[0m  [["email", "milana@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:33:in `update'
+  [1m[36mAuthor Update (0.2ms)[0m  [1m[33mUPDATE "authors" SET "email" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["email", "milana@gmail.com"], ["updated_at", "2024-05-13 07:25:57.773457"], ["id", 1]]
+  ↳ app/controllers/authors_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:33:in `update'
+Redirected to http://localhost:3000/authors/1
+Completed 302 Found in 13ms (ActiveRecord: 2.4ms | Allocations: 5123)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-13 10:25:57 +0300
+Processing by AuthorsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4385)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 5326)
+
+
+Started GET "/articles" for ::1 at 2024-05-13 10:26:00 +0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1381)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4709)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 4969)
+
+
+Started GET "/articles/1" for ::1 at 2024-05-13 10:26:02 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 21.5ms | Allocations: 7058)
+  Rendered articles/show.html.erb within layouts/application (Duration: 31.3ms | Allocations: 10736)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 13805)
+Completed 200 OK in 41ms (Views: 35.3ms | ActiveRecord: 0.7ms | Allocations: 15088)
+
+
+Started GET "/articles/new" for ::1 at 2024-05-13 10:26:02 +0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:26
+  Rendered articles/_form.html.erb (Duration: 7.0ms | Allocations: 2339)
+  Rendered articles/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2589)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5632)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 5978)
+
+
+Started POST "/articles" for ::1 at 2024-05-13 10:26:30 +0300
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"status"=>"public", "title"=>"Article 2", "body"=>"Loro ipsum......", "author_id"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "status", "author_id") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Article 2"], ["body", "Loro ipsum......"], ["created_at", "2024-05-13 07:26:30.785109"], ["updated_at", "2024-05-13 07:26:30.785109"], ["status", "public"], ["author_id", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms | Allocations: 3291)
+
+
+Started GET "/articles/4" for ::1 at 2024-05-13 10:26:30 +0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 1.9ms | Allocations: 1170)
+  Rendered articles/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2369)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 5408)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.3ms | Allocations: 6015)
+
+
+Started GET "/articles/4" for ::1 at 2024-05-13 10:28:04 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 5.6ms | Allocations: 4687)
+  Rendered articles/show.html.erb within layouts/application (Duration: 32.6ms | Allocations: 13506)
+  Rendered layout layouts/application.html.erb (Duration: 96.4ms | Allocations: 34655)
+Completed 200 OK in 112ms (Views: 97.5ms | ActiveRecord: 4.6ms | Allocations: 41757)
+
+
+Started GET "/articles" for ::1 at 2024-05-13 10:28:09 +0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2232)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5556)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 5884)
+
+
+Started GET "/authors" for ::1 at 2024-05-13 10:28:11 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:4
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 728)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4051)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 4596)
+
+
+Started GET "/authors/new" for ::1 at 2024-05-13 10:28:13 +0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.4ms | Allocations: 1522)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4809)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5152)
+
+
+Started GET "/articles" for ::1 at 2024-05-13 10:28:17 +0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1871)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5227)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 5487)
+
+
+Started GET "/articles/1" for ::1 at 2024-05-13 10:28:17 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 2.3ms | Allocations: 1156)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2312)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5359)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 5962)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-13 10:28:18 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2870)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 6184)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 7735)
+
+
+Started GET "/articles/1" for ::1 at 2024-05-13 10:28:28 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 6.5ms | Allocations: 1140)
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2293)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5366)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 5970)
+
+
+Started GET "/articles/4" for ::1 at 2024-05-13 10:28:28 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 2.0ms | Allocations: 1153)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2305)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5343)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 5946)
+
+
+Started GET "/articles/4/edit" for ::1 at 2024-05-13 10:28:28 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:26
+  Rendered articles/_form.html.erb (Duration: 4.2ms | Allocations: 2133)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2384)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5423)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 6094)
+
+
+Started GET "/authors/1" for ::1 at 2024-05-13 10:28:33 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:49:in `set_author'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/authors/show.html.erb:17
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:20
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1093)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4457)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.4ms | Allocations: 5351)
+
+
+Started GET "/articles/4/edit" for ::1 at 2024-05-13 10:28:34 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:26
+  Rendered articles/_form.html.erb (Duration: 4.5ms | Allocations: 1615)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1678)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4716)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 5320)
+
+
+Started POST "/articles/4/comments" for ::1 at 2024-05-13 10:28:53 +0300
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"status"=>"public", "commenter"=>"wow2", "body"=>"Loro ipsum.."}, "commit"=>"Create Comment", "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (1.9ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["commenter", "wow2"], ["body", "Loro ipsum.."], ["article_id", 4], ["created_at", "2024-05-13 07:28:53.230733"], ["updated_at", "2024-05-13 07:28:53.230733"], ["status", "public"]]
+  ↳ app/controllers/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:7:in `create'
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms | Allocations: 2928)
+
+
+Started GET "/articles/4" for ::1 at 2024-05-13 10:28:53 +0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:20
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 1.7ms | Allocations: 441)
+  Rendered comments/_form.html.erb (Duration: 1.8ms | Allocations: 1125)
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4319)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7362)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.4ms | Allocations: 8013)
+
+
+Started GET "/articles/4" for ::1 at 2024-05-13 10:29:41 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:20
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 1.1ms | Allocations: 386)
+  Rendered comments/_form.html.erb (Duration: 7.8ms | Allocations: 1542)
+  Rendered articles/show.html.erb within layouts/application (Duration: 35.8ms | Allocations: 15227)
+  Rendered layout layouts/application.html.erb (Duration: 100.8ms | Allocations: 36397)
+Completed 200 OK in 125ms (Views: 105.9ms | ActiveRecord: 4.6ms | Allocations: 43491)
+
+
+Started GET "/articles/4/edit" for ::1 at 2024-05-13 10:29:50 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:26
+  Rendered articles/_form.html.erb (Duration: 5.4ms | Allocations: 2217)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2467)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5512)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 6185)
+
+
+Started GET "/articles/4" for ::1 at 2024-05-13 10:30:43 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:20
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.4ms | Allocations: 153)
+  Rendered comments/_form.html.erb (Duration: 2.2ms | Allocations: 1147)
+  Rendered articles/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2989)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 11247)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.5ms | Allocations: 11848)
+
+
+Started GET "/articles/4/edit" for ::1 at 2024-05-13 10:30:45 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:26
+  Rendered articles/_form.html.erb (Duration: 6.7ms | Allocations: 1636)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1699)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4740)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 5343)
+
+

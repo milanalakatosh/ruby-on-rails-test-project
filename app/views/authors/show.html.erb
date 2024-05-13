@@ -27,8 +27,8 @@
 </div>
 
 <div className='button-container'>
-  <%= link_to 'Edit', edit_author_path(@author), class: 'button' %> 
-  <%= link_to 'Delete', author_path(@author), class: 'button button_delete', data: {
+  <%= link_to 'Edit Author', edit_author_path(@author), class: 'button' %> 
+  <%= link_to 'Delete Author', author_path(@author), class: 'button button_delete', data: {
                       turbo_method: :delete,
                       turbo_confirm: "Are you sure?"
                     } %>
