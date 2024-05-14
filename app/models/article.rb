@@ -6,6 +6,5 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
-  validates :author_id, presence: true
-
+  validates_presence_of :author_id
 end

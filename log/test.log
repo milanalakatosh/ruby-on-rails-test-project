@@ -693,3 +693,812 @@ INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "
   [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 08:49:46.423153', '2024-05-14 08:49:46.423153');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 08:49:46.423153', '2024-05-14 08:49:46.423153');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 08:49:46.424743', '2024-05-14 08:49:46.424743');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 08:49:46.424743', '2024-05-14 08:49:46.424743');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 08:49:46.425529', '2024-05-14 08:49:46.425529');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 08:49:46.425529', '2024-05-14 08:49:46.425529')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 08:49:46.432587', '2024-05-14 08:49:46.432587');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 08:49:46.432587', '2024-05-14 08:49:46.432587');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 08:49:46.432653', '2024-05-14 08:49:46.432653');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 08:49:46.432653', '2024-05-14 08:49:46.432653');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 08:49:46.432685', '2024-05-14 08:49:46.432685');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 08:49:46.432685', '2024-05-14 08:49:46.432685')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 08:53:20.501911', '2024-05-14 08:53:20.501911');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 08:53:20.501911', '2024-05-14 08:53:20.501911');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 08:53:20.504946', '2024-05-14 08:53:20.504946');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 08:53:20.504946', '2024-05-14 08:53:20.504946');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 08:53:20.505707', '2024-05-14 08:53:20.505707');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 08:53:20.505707', '2024-05-14 08:53:20.505707')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 08:56:17.044019', '2024-05-14 08:56:17.044019');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 08:56:17.044019', '2024-05-14 08:56:17.044019');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 08:56:17.047407', '2024-05-14 08:56:17.047407');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 08:56:17.047407', '2024-05-14 08:56:17.047407');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 08:56:17.048188', '2024-05-14 08:56:17.048188');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 08:56:17.048188', '2024-05-14 08:56:17.048188')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 08:57:29.913909', '2024-05-14 08:57:29.913909');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 08:57:29.913909', '2024-05-14 08:57:29.913909');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 08:57:29.915639', '2024-05-14 08:57:29.915639');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 08:57:29.915639', '2024-05-14 08:57:29.915639');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 08:57:29.916338', '2024-05-14 08:57:29.916338');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 08:57:29.916338', '2024-05-14 08:57:29.916338')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 09:00:13.956656', '2024-05-14 09:00:13.956656');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 09:00:13.956656', '2024-05-14 09:00:13.956656');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 09:00:13.958500', '2024-05-14 09:00:13.958500');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 09:00:13.958500', '2024-05-14 09:00:13.958500');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 09:00:13.959235', '2024-05-14 09:00:13.959235');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 09:00:13.959235', '2024-05-14 09:00:13.959235')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 14:36:51.392205', '2024-05-14 14:36:51.392205');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 14:36:51.392205', '2024-05-14 14:36:51.392205');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 14:36:51.394150', '2024-05-14 14:36:51.394150');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 14:36:51.394150', '2024-05-14 14:36:51.394150');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 14:36:51.394885', '2024-05-14 14:36:51.394885');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 14:36:51.394885', '2024-05-14 14:36:51.394885')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 14:39:08.782625', '2024-05-14 14:39:08.782625');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 14:39:08.782625', '2024-05-14 14:39:08.782625');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 14:39:08.784518', '2024-05-14 14:39:08.784518');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 14:39:08.784518', '2024-05-14 14:39:08.784518');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 14:39:08.785274', '2024-05-14 14:39:08.785274');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 14:39:08.785274', '2024-05-14 14:39:08.785274')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 14:45:57.878804', '2024-05-14 14:45:57.878804');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 14:45:57.878804', '2024-05-14 14:45:57.878804');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 14:45:57.880805', '2024-05-14 14:45:57.880805');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 14:45:57.880805', '2024-05-14 14:45:57.880805');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 14:45:57.881599', '2024-05-14 14:45:57.881599');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 14:45:57.881599', '2024-05-14 14:45:57.881599')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 14:47:11.617536', '2024-05-14 14:47:11.617536');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 14:47:11.617536', '2024-05-14 14:47:11.617536');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 14:47:11.619495', '2024-05-14 14:47:11.619495');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 14:47:11.619495', '2024-05-14 14:47:11.619495');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 14:47:11.620227', '2024-05-14 14:47:11.620227');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 14:47:11.620227', '2024-05-14 14:47:11.620227')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:12:50.435557', '2024-05-14 15:12:50.435557');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:12:50.435557', '2024-05-14 15:12:50.435557');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:12:50.437329', '2024-05-14 15:12:50.437329');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:12:50.437329', '2024-05-14 15:12:50.437329');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:12:50.438027', '2024-05-14 15:12:50.438027');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:12:50.438027', '2024-05-14 15:12:50.438027')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:25:15.333779', '2024-05-14 15:25:15.333779');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:25:15.333779', '2024-05-14 15:25:15.333779');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:25:15.335768', '2024-05-14 15:25:15.335768');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:25:15.335768', '2024-05-14 15:25:15.335768');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:25:15.336572', '2024-05-14 15:25:15.336572');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:25:15.336572', '2024-05-14 15:25:15.336572')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:27:35.661161', '2024-05-14 15:27:35.661161');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:27:35.661161', '2024-05-14 15:27:35.661161');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.662933', '2024-05-14 15:27:35.662933');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.662933', '2024-05-14 15:27:35.662933');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:27:35.663608', '2024-05-14 15:27:35.663608');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:27:35.663608', '2024-05-14 15:27:35.663608')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:27:35.669952', '2024-05-14 15:27:35.669952');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:27:35.669952', '2024-05-14 15:27:35.669952');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.670078', '2024-05-14 15:27:35.670078');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.670078', '2024-05-14 15:27:35.670078');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:27:35.670111', '2024-05-14 15:27:35.670111');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:27:35.670111', '2024-05-14 15:27:35.670111')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:27:35.675404', '2024-05-14 15:27:35.675404');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:27:35.675404', '2024-05-14 15:27:35.675404');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.675524', '2024-05-14 15:27:35.675524');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.675524', '2024-05-14 15:27:35.675524');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:27:35.675564', '2024-05-14 15:27:35.675564');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:27:35.675564', '2024-05-14 15:27:35.675564')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:27:35.680346', '2024-05-14 15:27:35.680346');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:27:35.680346', '2024-05-14 15:27:35.680346');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.680414', '2024-05-14 15:27:35.680414');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.680414', '2024-05-14 15:27:35.680414');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:27:35.680449', '2024-05-14 15:27:35.680449');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:27:35.680449', '2024-05-14 15:27:35.680449')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:27:35.707459', '2024-05-14 15:27:35.707459');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:27:35.707459', '2024-05-14 15:27:35.707459');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.707529', '2024-05-14 15:27:35.707529');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:27:35.707529', '2024-05-14 15:27:35.707529');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:27:35.707565', '2024-05-14 15:27:35.707565');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:27:35.707565', '2024-05-14 15:27:35.707565')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:32:58.741222', '2024-05-14 15:32:58.741222');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:32:58.741222', '2024-05-14 15:32:58.741222');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:32:58.743088', '2024-05-14 15:32:58.743088');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:32:58.743088', '2024-05-14 15:32:58.743088');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:32:58.743803', '2024-05-14 15:32:58.743803');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:32:58.743803', '2024-05-14 15:32:58.743803')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:35:47.146788', '2024-05-14 15:35:47.146788');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:35:47.146788', '2024-05-14 15:35:47.146788');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:35:47.148629', '2024-05-14 15:35:47.148629');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:35:47.148629', '2024-05-14 15:35:47.148629');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:35:47.149422', '2024-05-14 15:35:47.149422');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:35:47.149422', '2024-05-14 15:35:47.149422')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:48:02.415940', '2024-05-14 15:48:02.415940');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:48:02.415940', '2024-05-14 15:48:02.415940');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:48:02.417776', '2024-05-14 15:48:02.417776');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:48:02.417776', '2024-05-14 15:48:02.417776');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:48:02.418520', '2024-05-14 15:48:02.418520');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:48:02.418520', '2024-05-14 15:48:02.418520')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:51:06.746153', '2024-05-14 15:51:06.746153');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:51:06.746153', '2024-05-14 15:51:06.746153');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:51:06.749330', '2024-05-14 15:51:06.749330');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:51:06.749330', '2024-05-14 15:51:06.749330');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:51:06.750329', '2024-05-14 15:51:06.750329');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:51:06.750329', '2024-05-14 15:51:06.750329')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:52:56.781299', '2024-05-14 15:52:56.781299');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:52:56.781299', '2024-05-14 15:52:56.781299');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:52:56.783325', '2024-05-14 15:52:56.783325');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:52:56.783325', '2024-05-14 15:52:56.783325');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:52:56.784146', '2024-05-14 15:52:56.784146');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:52:56.784146', '2024-05-14 15:52:56.784146')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 15:55:56.117144', '2024-05-14 15:55:56.117144');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 15:55:56.117144', '2024-05-14 15:55:56.117144');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 15:55:56.120063', '2024-05-14 15:55:56.120063');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 15:55:56.120063', '2024-05-14 15:55:56.120063');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 15:55:56.120783', '2024-05-14 15:55:56.120783');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 15:55:56.120783', '2024-05-14 15:55:56.120783')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 17:40:45.026598', '2024-05-14 17:40:45.026598');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 17:40:45.026598', '2024-05-14 17:40:45.026598');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 17:40:45.029222', '2024-05-14 17:40:45.029222');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 17:40:45.029222', '2024-05-14 17:40:45.029222');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 17:40:45.030130', '2024-05-14 17:40:45.030130');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 17:40:45.030130', '2024-05-14 17:40:45.030130')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2024-05-14 17:49:34.111705', '2024-05-14 17:49:34.111705');
+INSERT INTO "articles" ("id", "title", "body", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2024-05-14 17:49:34.111705', '2024-05-14 17:49:34.111705');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 17:49:34.114618', '2024-05-14 17:49:34.114618');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 17:49:34.114618', '2024-05-14 17:49:34.114618');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 17:49:34.115387', '2024-05-14 17:49:34.115387');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 17:49:34.115387', '2024-05-14 17:49:34.115387')[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.0ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 17:56:41.681595', '2024-05-14 17:56:41.681595');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 17:56:41.681595', '2024-05-14 17:56:41.681595');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 17:56:41.684824', '2024-05-14 17:56:41.684824');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 17:56:41.684824', '2024-05-14 17:56:41.684824')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-05-14 17:58:29.267021', '2024-05-14 17:58:29.267021');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2024-05-14 17:58:29.267021', '2024-05-14 17:58:29.267021');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 17:58:29.269133', '2024-05-14 17:58:29.269133');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 17:58:29.269133', '2024-05-14 17:58:29.269133')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 980190962, '2024-05-14 17:59:20.715920', '2024-05-14 17:59:20.715920');
+INSERT INTO "comments" ("id", "commenter", "body", "article_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 298486374, '2024-05-14 17:59:20.715920', '2024-05-14 17:59:20.715920')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+AuthorsTest: test_should_create_Author
+--------------------------------------
+Started GET "/authors" for 127.0.0.1 at 2024-05-14 20:59:55 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1725)
+  Rendered layout layouts/application.html.erb (Duration: 446.1ms | Allocations: 112117)
+Completed 200 OK in 483ms (Views: 467.2ms | ActiveRecord: 1.1ms | Allocations: 117226)
+Started GET "/assets/reset-d6df3e25127d462214fc31f405f31195ebeb53b73fc85671472e9b294a75ae62.css" for 127.0.0.1 at 2024-05-14 20:59:55 +0300
+Started GET "/assets/application-7becb322dc220ad09e073616460edc0ea68d66ed61ca2fab1e74b6570897d64c.css" for 127.0.0.1 at 2024-05-14 20:59:55 +0300
+Started GET "/assets/form-ef2f3121b95cfb717eecacfc6cc42c7fe7b3a019a2a66c5aac833ee617faf946.css" for 127.0.0.1 at 2024-05-14 20:59:55 +0300
+Started GET "/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/controllers/h-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/logo-f25582c514de50fa44f3b4b7a6633f76e8da41927c7767e3adcee94a047b85fe.svg" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/turbo.min-918a6cf2f2be8ed9555c9a11eee69c7dc2f01770802815576efc931876b327fb.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.3ms | Allocations: 2077)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2931)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4886)
+Completed 200 OK in 23ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 14412)
+Started POST "/authors" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"author"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"unique@example.com"}, "commit"=>"Create Author"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "unique@example.com"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (2.5ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["first_name", "Test"], ["last_name", "Test"], ["email", "unique@example.com"], ["created_at", "2024-05-14 17:59:56.813067"], ["updated_at", "2024-05-14 17:59:56.813067"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:55686/authors
+Completed 302 Found in 13ms (ActiveRecord: 4.6ms | Allocations: 1956)
+Started GET "/authors" for 127.0.0.1 at 2024-05-14 20:59:56 +0300
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 471)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2436)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2696)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+AuthorTest: test_should_report_error
+------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+AuthorTest: test_last_name_should_be_present
+--------------------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+AuthorTest: test_email_should_be_unique
+---------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["created_at", "2024-05-14 18:29:31.734298"], ["updated_at", "2024-05-14 18:29:31.734298"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+AuthorTest: test_first_name_should_be_present
+---------------------------------------------
+  [1m[36mAuthor Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+AuthorTest: test_email_should_be_present
+----------------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+AuthorTest: test_should_be_valid
+--------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+AuthorTest: test_email_should_be_present
+----------------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+AuthorTest: test_last_name_should_be_present
+--------------------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+AuthorTest: test_email_should_be_unique
+---------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["created_at", "2024-05-14 18:30:09.596696"], ["updated_at", "2024-05-14 18:30:09.596696"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+AuthorTest: test_should_be_valid
+--------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+AuthorTest: test_first_name_should_be_present
+---------------------------------------------
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
