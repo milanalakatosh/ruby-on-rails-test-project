@@ -1,11 +1,18 @@
 <h1 class='header'>Authors</h1>
 
-<ol class='list'>
-  <% @authors.each do |author| %>
-    <li>
-      <%= link_to author.full_name, author_path(author.id), class:'link' %> 
-    </li>
-  <% end %>
-</ol>
+<% if @authors.any? %>
+  <ol class='list'>
+    <% @authors.each do |author| %>
+      <li>
+        <%= link_to author.full_name, author_path(author.id), class:'link' %> 
+      </li>
+    <% end %>
+  </ol>
+<% else %>
+  <p>No authors found.</p>
+<% end %>
 
-<%= link_to "New Author", new_author_path, class:'button' %>
+<div className='button-container'>
+  <%= link_to "New Author", new_author_path, class:'button' %>
+  <%= link_to 'New Article', new_article_path, class: 'button' %>
+</div>
