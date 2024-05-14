@@ -1,0 +1,42 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-lock
+
+# Ignore log files.
+/log/*.log
+/log/*.log.*
+!/log/.keep
+
+# Ignore tmp files.
+/tmp
+
+# Ignore uploaded files in development and test environments.
+/storage/*
+!/storage/.keep
+/public/uploads
+/public/packs
+/public/packs-test
+/node_modules
+
+# Ignore environment-specific files.
+/.env
+/.env.*
+
+# Ignore Byebug command history file.
+/.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore yarn packages.
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore Mac and Linux file system files.
+.DS_Store
+Thumbs.db
