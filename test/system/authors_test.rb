@@ -2,6 +2,10 @@ require "application_system_test_case"
 require 'securerandom'
 
 class AuthorsTest < ApplicationSystemTestCase
+  setup do
+    @author = authors(:one)
+  end
+  
   test "visiting the index" do
     visit authors_url
 
@@ -24,10 +28,6 @@ class AuthorsTest < ApplicationSystemTestCase
     assert_text "Test surname"
   end
 
-  setup do
-    @author = authors(:one)
-  end
-
   test "should edit Author" do
     visit edit_author_path(@author)
 
@@ -37,10 +37,6 @@ class AuthorsTest < ApplicationSystemTestCase
     click_on "Update Author"
 
     assert_text "Updated Name"
-  end
-
-  setup do
-    @author = authors(:two)
   end
 
   test "should delete Author" do
@@ -55,5 +51,5 @@ class AuthorsTest < ApplicationSystemTestCase
     end
 
     assert_no_text "#{@author.first_name} #{@author.last_name}", wait: 10
-end
+  end
 end

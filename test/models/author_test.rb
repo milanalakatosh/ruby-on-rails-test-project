@@ -1,13 +1,13 @@
 require "test_helper"
 
 class AuthorTest < ActiveSupport::TestCase
+  def setup
+    @author = authors(:one)
+  end
+
   test "should not save author without data" do
     author = Author.new
     assert_not author.save, "Saved the author without any data"
-  end
-  
-  def setup
-    @author = authors(:one)
   end
 
   test "should be valid" do
@@ -33,6 +33,27 @@ class AuthorTest < ActiveSupport::TestCase
     duplicate_author = @author.dup
     @author.save
     assert_not duplicate_author.valid?
+  end
+
+  test "should save valid author" do
+    author = Author.new(first_name: "Test", last_name: "Test", email: "testUnique@example.com")
+    assert author.save, "Could not save valid author"
+  end
+
+  test "should find author by id" do
+    assert_equal @author, Author.find(@author.id), "Could not find author by id"
+  end
+
+  test "should update author attributes" do
+    new_first_name = "Jane"
+    @author.update(first_name: new_first_name)
+    assert_equal new_first_name, @author.reload.first_name, "Could not update author attributes"
+  end
+
+  test "should destroy author" do
+    author_to_destroy = @author
+    @author.destroy
+    assert_not Author.exists?(author_to_destroy.id), "Could not destroy author"
   end
 
 end
