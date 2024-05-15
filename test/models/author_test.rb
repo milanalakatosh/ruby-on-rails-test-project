@@ -7,7 +7,7 @@ class AuthorTest < ActiveSupport::TestCase
   end
   
   def setup
-    @author = Author.new(first_name: "John", last_name: "Doe", email: "john@example.com")
+    @author = authors(:one)
   end
 
   test "should be valid" do

@@ -27,7 +27,7 @@ ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [x86_64-darwin20]
 
 * To run all the tests:
 
-### `bin/rails test`
+### `bin/rails test:all`
 
 * Services (job queues, cache servers, search engines, etc.)
 

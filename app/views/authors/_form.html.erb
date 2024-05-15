@@ -2,7 +2,7 @@
   <%= form_with model: author do |form| %>
     <div class='form-field'>
       <%= form.label :first_name %><br>
-      <%= form.text_field :first_name %>
+      <%= form.text_field :first_name, id: "author_first_name" %>
       <% author.errors.full_messages_for(:first_name).each do |message| %>
         <div class='error'><%= message %></div>
       <% end %>
@@ -10,7 +10,7 @@
 
     <div class='form-field'>
       <%= form.label :last_name %><br>
-      <%= form.text_field :last_name %>
+      <%= form.text_field :last_name, id: "author_last_name" %>
       <% author.errors.full_messages_for(:last_name).each do |message| %>
         <div class='error'><%= message %></div>
       <% end %>
