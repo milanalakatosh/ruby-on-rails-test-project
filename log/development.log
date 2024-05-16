@@ -5829,3 +5829,364 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 5414)
 
 
+Started POST "/articles" for ::1 at 2024-05-16 11:56:20 +0300
+  
+Zeitwerk::NameError (wrong constant name CommentsController copy inferred by Module from file
+
+  /Users/Istvan/Desktop/Digital Magic/tests/ruby-on-rails-test-project/app/controllers/comments_controller copy.rb
+
+Possible ways to address this:
+
+  * Tell Zeitwerk to ignore this particular file.
+  * Tell Zeitwerk to ignore one of its parent directories.
+  * Rename the file to comply with the naming conventions.
+  * Modify the inflector to handle this case.
+):
+  
+zeitwerk (2.6.13) lib/zeitwerk/loader/helpers.rb:171:in `rescue in cname_for'
+zeitwerk (2.6.13) lib/zeitwerk/loader/helpers.rb:166:in `cname_for'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:414:in `block in define_autoloads_for_dir'
+zeitwerk (2.6.13) lib/zeitwerk/loader/helpers.rb:40:in `block in ls'
+zeitwerk (2.6.13) lib/zeitwerk/loader/helpers.rb:25:in `each'
+zeitwerk (2.6.13) lib/zeitwerk/loader/helpers.rb:25:in `ls'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:411:in `define_autoloads_for_dir'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:124:in `block (2 levels) in setup'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:123:in `each'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:123:in `block in setup'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:120:in `synchronize'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:120:in `setup'
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:230:in `reload'
+activesupport (7.1.3.2) lib/active_support/dependencies.rb:79:in `block in clear'
+activesupport (7.1.3.2) lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+activesupport (7.1.3.2) lib/active_support/dependencies/interlock.rb:17:in `unloading'
+activesupport (7.1.3.2) lib/active_support/dependencies.rb:32:in `unload_interlock'
+activesupport (7.1.3.2) lib/active_support/dependencies.rb:77:in `clear'
+railties (7.1.3.2) lib/rails/application/finisher.rb:188:in `block (2 levels) in <module:Finisher>'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+railties (7.1.3.2) lib/rails/application/finisher.rb:217:in `block (3 levels) in <module:Finisher>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:110:in `run_callbacks'
+activesupport (7.1.3.2) lib/active_support/reloader.rb:128:in `class_unload!'
+railties (7.1.3.2) lib/rails/application/finisher.rb:216:in `block (2 levels) in <module:Finisher>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:448:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:448:in `block in make_lambda'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:707:in `block (2 levels) in default_terminator'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:706:in `catch'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:706:in `block in default_terminator'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in `run_callbacks'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:129:in `run'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:125:in `run!'
+activesupport (7.1.3.2) lib/active_support/reloader.rb:122:in `run!'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:78:in `block in run!'
+<internal:kernel>:90:in `tap'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:75:in `run!'
+activesupport (7.1.3.2) lib/active_support/reloader.rb:64:in `run!'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/articles/new" for ::1 at 2024-05-16 11:56:38 +0300
+  
+Zeitwerk::SetupRequired (please, finish your configuration and call Zeitwerk::Loader#setup once all is ready):
+  
+zeitwerk (2.6.13) lib/zeitwerk/loader.rb:225:in `reload'
+activesupport (7.1.3.2) lib/active_support/dependencies.rb:79:in `block in clear'
+activesupport (7.1.3.2) lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+activesupport (7.1.3.2) lib/active_support/dependencies/interlock.rb:17:in `unloading'
+activesupport (7.1.3.2) lib/active_support/dependencies.rb:32:in `unload_interlock'
+activesupport (7.1.3.2) lib/active_support/dependencies.rb:77:in `clear'
+railties (7.1.3.2) lib/rails/application/finisher.rb:188:in `block (2 levels) in <module:Finisher>'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+railties (7.1.3.2) lib/rails/application/finisher.rb:217:in `block (3 levels) in <module:Finisher>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:110:in `run_callbacks'
+activesupport (7.1.3.2) lib/active_support/reloader.rb:128:in `class_unload!'
+railties (7.1.3.2) lib/rails/application/finisher.rb:216:in `block (2 levels) in <module:Finisher>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:448:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:448:in `block in make_lambda'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:707:in `block (2 levels) in default_terminator'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:706:in `catch'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:706:in `block in default_terminator'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in `run_callbacks'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:129:in `run'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:125:in `run!'
+activesupport (7.1.3.2) lib/active_support/reloader.rb:122:in `run!'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:78:in `block in run!'
+<internal:kernel>:90:in `tap'
+activesupport (7.1.3.2) lib/active_support/execution_wrapper.rb:75:in `run!'
+activesupport (7.1.3.2) lib/active_support/reloader.rb:64:in `run!'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-05-16 11:56:46 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant ApplicationHelper):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/articles_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-05-16 11:56:56 +0300
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1296)
+
+
+  
+NameError (uninitialized constant ArticlesController::Article):
+  
+app/controllers/articles_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2024-05-16 11:57:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:5
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4374)
+  Rendered layout layouts/application.html.erb (Duration: 234.8ms | Allocations: 57752)
+Completed 200 OK in 282ms (Views: 237.1ms | ActiveRecord: 2.8ms | Allocations: 69785)
+
+
+Started GET "/articles/new" for ::1 at 2024-05-16 11:57:22 +0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/articles/_form.html.erb:6
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:7
+  Rendered articles/_form.html.erb (Duration: 37.1ms | Allocations: 10630)
+  Rendered articles/new.html.erb within layouts/application (Duration: 38.9ms | Allocations: 10919)
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 13975)
+Completed 200 OK in 75ms (Views: 55.4ms | ActiveRecord: 1.8ms | Allocations: 23790)
+
+
+Started POST "/articles" for ::1 at 2024-05-16 11:57:31 +0300
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"author_id"=>"13", "status"=>"public", "title"=>"New article 2", "body"=>"ervqejfkejfkjekrfe"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (3.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "status", "author_id") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "New article 2"], ["body", "ervqejfkejfkjekrfe"], ["created_at", "2024-05-16 08:57:31.223655"], ["updated_at", "2024-05-16 08:57:31.223655"], ["status", "public"], ["author_id", 13]]
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+Redirected to http://localhost:3000/articles/8
+Completed 302 Found in 21ms (ActiveRecord: 5.5ms | Allocations: 6865)
+
+
+Started GET "/articles/8" for ::1 at 2024-05-16 11:57:31 +0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 8], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 11.2ms | Allocations: 6719)
+  Rendered articles/show.html.erb within layouts/application (Duration: 23.4ms | Allocations: 11071)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 14120)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.6ms | Allocations: 15486)
+
+
+Started POST "/articles/8/comments" for ::1 at 2024-05-16 11:57:46 +0300
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"status"=>"public", "commenter"=>"kkekrkvnkr", "body"=>"ekmvkrmkvmrvr"}, "commit"=>"Create Comment", "article_id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:20:in `set_article'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:8:in `create'
+  [1m[36mComment Create (1.5ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["commenter", "kkekrkvnkr"], ["body", "ekmvkrmkvmrvr"], ["article_id", 8], ["created_at", "2024-05-16 08:57:46.393579"], ["updated_at", "2024-05-16 08:57:46.393579"], ["status", "public"]]
+  ↳ app/controllers/comments_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/8
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 3037)
+
+
+Started GET "/articles/8" for ::1 at 2024-05-16 11:57:46 +0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 8], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:20
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 1.1ms | Allocations: 445)
+  Rendered comments/_form.html.erb (Duration: 1.9ms | Allocations: 1139)
+  Rendered articles/show.html.erb within layouts/application (Duration: 21.1ms | Allocations: 4322)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 7394)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.4ms | Allocations: 8006)
+
+
+Started GET "/articles" for ::1 at 2024-05-16 11:57:55 +0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:5
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1815)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5154)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 5422)
+
+
+Started GET "/articles/8" for ::1 at 2024-05-16 11:57:56 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 8], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:20
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.4ms | Allocations: 153)
+  Rendered comments/_form.html.erb (Duration: 1.6ms | Allocations: 1125)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2964)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6009)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 6617)
+
+
+Started GET "/articles/8/edit" for ::1 at 2024-05-16 11:57:56 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/articles/_form.html.erb:6
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/articles/_form.html.erb:7
+  Rendered articles/_form.html.erb (Duration: 13.6ms | Allocations: 2075)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2254)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 5329)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms | Allocations: 6005)
+
+
+Started DELETE "/articles/8/comments/12?_method=delete" for ::1 at 2024-05-16 11:57:59 +0300
+Processing by CommentsController#destroy as TURBO_STREAM
+  Parameters: {"article_id"=>"8", "id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:20:in `set_article'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 8], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:13:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `destroy'
+  [1m[36mComment Destroy (1.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/comments_controller.rb:14:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `destroy'
+Redirected to http://localhost:3000/articles/8
+Completed 303 See Other in 14ms (ActiveRecord: 2.0ms | Allocations: 2734)
+
+
+Started GET "/articles/8" for ::1 at 2024-05-16 11:57:59 +0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mComment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 8], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:18
+  Rendered comments/_form.html.erb (Duration: 1.8ms | Allocations: 1156)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2308)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5362)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 5973)
+
+
