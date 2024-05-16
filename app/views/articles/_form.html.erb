@@ -9,7 +9,7 @@
           <div class='error'><%= message %></div>
         <% end %>
       <% else %>
-        <p>No authors found. <%= link_to "Create an author first.", new_author_path, class: 'link' %></p>
+        <p class='notification'>No authors found. <%= link_to "Create an author first.", new_author_path, class: 'link' %></p>
       <% end %>
     </div>
 

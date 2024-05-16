@@ -1,7 +1,6 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version
+ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [x86_64-darwin20]
 
 ## Available Scripts
 
@@ -9,28 +8,14 @@ In the project directory, you can run:
 
 ### `bin/rails server`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This command starts the Rails server, allowing you 
+to access this app in a web browser at http://localhost:3000.
 
-Things you may want to cover:
+To run database migrations, use command:
 
-* Ruby version
-ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [x86_64-darwin20]
+### `rails db:migrate command`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* To run all the tests:
+* To run all the tests, use command:
 
 ### `bin/rails test:all`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
