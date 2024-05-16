@@ -6976,3 +6976,238 @@ AuthorTest: test_should_destroy_author
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "articles";
+DELETE FROM "authors";
+DELETE FROM "comments";
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (980190962, 'John', 'Doe', 'john@example.com', '2024-05-16 09:16:09.519952', '2024-05-16 09:16:09.519952');
+INSERT INTO "authors" ("id", "first_name", "last_name", "email", "created_at", "updated_at") VALUES (298486374, 'John2', 'Doe2', 'john2@example.com', '2024-05-16 09:16:09.519952', '2024-05-16 09:16:09.519952')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+AuthorsTest: test_should_delete_Author
+--------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors/980190962" for 127.0.0.1 at 2024-05-16 12:16:11 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 980190962], ["LIMIT", 1]]
+  Rendered authors/show.html.erb within layouts/application (Duration: 21.6ms | Allocations: 3227)
+  Rendered layout layouts/application.html.erb (Duration: 554.4ms | Allocations: 53275)
+Completed 200 OK in 596ms (Views: 566.7ms | ActiveRecord: 0.5ms | Allocations: 57674)
+Started GET "/assets/reset-d6df3e25127d462214fc31f405f31195ebeb53b73fc85671472e9b294a75ae62.css" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/application-7becb322dc220ad09e073616460edc0ea68d66ed61ca2fab1e74b6570897d64c.css" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/controllers/h-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/form-2b97917287c65ac6547fb7b75c36150c33d0740d0953a97c2d4ad5689a956010.css" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/logo-f25582c514de50fa44f3b4b7a6633f76e8da41927c7767e3adcee94a047b85fe.svg" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/turbo.min-918a6cf2f2be8ed9555c9a11eee69c7dc2f01770802815576efc931876b327fb.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started GET "/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Started DELETE "/authors/980190962?_method=delete" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 980190962]]
+  [1m[36mAuthor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:64793/authors
+Completed 303 See Other in 3ms (ActiveRecord: 0.5ms | Allocations: 1263)
+Started GET "/authors" for 127.0.0.1 at 2024-05-16 12:16:12 +0300
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2706)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3033)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+AuthorsTest: test_visiting_the_index
+------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors" for 127.0.0.1 at 2024-05-16 12:16:13 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 384)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2345)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 2556)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+AuthorsTest: test_should_create_Author
+--------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors" for 127.0.0.1 at 2024-05-16 12:16:13 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 387)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2348)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 2566)
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-16 12:16:13 +0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 6.5ms | Allocations: 2041)
+  Rendered authors/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2309)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4913)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 6270)
+Started POST "/authors" for 127.0.0.1 at 2024-05-16 12:16:14 +0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"author"=>{"first_name"=>"Test name", "last_name"=>"Test surname", "email"=>"test-d73b8da3@example.com"}, "commit"=>"Create Author"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "test-d73b8da3@example.com"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["first_name", "Test name"], ["last_name", "Test surname"], ["email", "test-d73b8da3@example.com"], ["created_at", "2024-05-16 09:16:14.339531"], ["updated_at", "2024-05-16 09:16:14.339531"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:64793/authors
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1807)
+Started GET "/authors" for 127.0.0.1 at 2024-05-16 12:16:14 +0300
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 419)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2380)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 2593)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+AuthorsTest: test_should_edit_Author
+------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors/980190962/edit" for 127.0.0.1 at 2024-05-16 12:16:14 +0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.2ms | Allocations: 745)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2868)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 3262)
+Started PATCH "/authors/980190962" for 127.0.0.1 at 2024-05-16 12:16:14 +0300
+Processing by AuthorsController#update as TURBO_STREAM
+  Parameters: {"author"=>{"first_name"=>"Updated Name", "last_name"=>"Updated Last Name", "email"=>"john@example.com"}, "commit"=>"Update Author", "id"=>"980190962"}
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Update (0.1ms)[0m  [1m[33mUPDATE "authors" SET "first_name" = ?, "last_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["first_name", "Updated Name"], ["last_name", "Updated Last Name"], ["updated_at", "2024-05-16 09:16:14.985665"], ["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:64793/authors/980190962
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1180)
+Started GET "/authors/980190962" for 127.0.0.1 at 2024-05-16 12:16:15 +0300
+Processing by AuthorsController#show as TURBO_STREAM
+  Parameters: {"id"=>"980190962"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."author_id" = ? LIMIT ?[0m  [["author_id", 980190962], ["LIMIT", 1]]
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2321)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 2653)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+AuthorTest: test_should_not_save_author_without_data
+----------------------------------------------------
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+AuthorTest: test_last_name_should_be_present
+--------------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+AuthorTest: test_email_should_be_unique
+---------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+AuthorTest: test_should_destroy_author
+--------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."author_id" = ?[0m  [["author_id", 980190962]]
+  [1m[36mAuthor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+AuthorTest: test_should_update_author_attributes
+------------------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Update (0.2ms)[0m  [1m[33mUPDATE "authors" SET "first_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["first_name", "Jane"], ["updated_at", "2024-05-16 09:16:16.082861"], ["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+AuthorTest: test_first_name_should_be_present
+---------------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+AuthorTest: test_should_be_valid
+--------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+AuthorTest: test_email_should_be_present
+----------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+AuthorTest: test_should_save_valid_author
+-----------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."email" = ? LIMIT ?[0m  [["email", "testUnique@example.com"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.1ms)[0m  [1m[32mINSERT INTO "authors" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["first_name", "Test"], ["last_name", "Test"], ["email", "testUnique@example.com"], ["created_at", "2024-05-16 09:16:16.090726"], ["updated_at", "2024-05-16 09:16:16.090726"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+AuthorTest: test_should_find_author_by_id
+-----------------------------------------
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
